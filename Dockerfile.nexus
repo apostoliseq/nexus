@@ -1,0 +1,7 @@
+FROM sonatype/nexus3:2.15.2
+
+EXPOSE 5000 8081
+
+VOLUME /opt/sonatype/sonatype-work
+
+USER nexus

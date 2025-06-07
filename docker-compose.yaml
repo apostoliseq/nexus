@@ -1,0 +1,15 @@
+services:
+  nexus:
+    image: ms-nosql_nexus:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile.nexus
+    ports:
+      - "8081:8081"
+      - "5000:5000"
+    volumes:
+      - /nexus-data:/opt/sonatype/sonatype-work
+    restart: unless-stopped
+
+volumes:
+  nexus-data:
