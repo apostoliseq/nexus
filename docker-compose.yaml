@@ -8,6 +8,9 @@ services:
     ports:
       - "8081:8081"
       - "5000:5000"
+    volumes:
+      - ./nexus-data:/nexus-data
+
     restart: unless-stopped
 
 volumes:
