@@ -1,7 +1,7 @@
-FROM sonatype/nexus3:2.15.2
+FROM sonatype/nexus3:3.80.0
 
 EXPOSE 5000 8081
 
-VOLUME /opt/sonatype/sonatype-work
+VOLUME /nexus-data
 
 USER nexus

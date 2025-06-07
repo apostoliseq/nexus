@@ -1,6 +1,7 @@
 services:
   nexus:
     image: ms-nosql_nexus:1.0
+    container_name: ms-nosql_nexus
     build:
       context: .
       dockerfile: Dockerfile.nexus
@@ -8,7 +9,7 @@ services:
       - "8081:8081"
       - "5000:5000"
     volumes:
-      - /nexus-data:/opt/sonatype/sonatype-work
+      - ./nexus-data:/nexus-data
     restart: unless-stopped
 
 volumes:
