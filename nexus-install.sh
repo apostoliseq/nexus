@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir nexus-data 
 sudo chown -R 200 nexus-data
-docker compose up -d
+docker compose up -d --build
